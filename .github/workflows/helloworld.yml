@@ -1,0 +1,16 @@
+name : "hello world work flow"
+#control when the workflow will run .Triggers the workflow to run on push events to the main or production branches.
+on:
+  push:
+    branches:
+      -main
+      -production
+   # we need to setup the perticular job that we need to execute
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "print hello world"
+        run: echo "hello world"
+        
+
